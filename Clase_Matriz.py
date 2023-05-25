@@ -77,9 +77,9 @@ class Matriz():
     """
     Clase matriz n * m (filas * Columnas)
     """
-    Mat_creadas = Mat_creadas = 0
-                                                                #????????????????
-    def __init__(self, args:list = [[1,0],[0,1]], name:any = f'Mat{Mat_creadas + 1}'):
+    Mat_NoName = 0
+
+    def __init__(self, args:list = [[1,0],[0,1]], name:any = None):
         """
         Ingresar una lista que contenga cada fila de la matriz como una lista,
         seguido de un nombre opcional para la matriz (se sugiere nombres en
@@ -95,8 +95,13 @@ class Matriz():
             assert len(self.valores[i]) == self.Mdimension , "La matriz debe \
 tener un elemento en cada posición"
 
-        self.name = name
-        Matriz.Mat_creadas = Matriz.Mat_creadas + 1 #??????????????
+        if name is not None:
+            self.name = name
+        else:
+            self.name = f'Mat{Matriz.Mat_NoName + 1}'
+            Matriz.Mat_NoName = Matriz.Mat_NoName + 1
+
+         
 
 
     def rename(self, name: any):
@@ -236,14 +241,6 @@ las dimensiones apropiadas para multiplicarse'
             transpuesta[ii] = [self.valores[fila][ii] for fila in range(self.Ndimension)]
 
         return Matriz(transpuesta, f"{self.name}'")
-
-
-    # def transpose(self): ?????????
-    #     """
-    #     Transpone la matriz ingresada, es decir, intercambia sus filas por sus
-    #     columnas. ALTERA la matriz ingresada.
-    #     """
-    #     self = self.get_transpuesta()
 
 
     def get_determinante(self):
@@ -413,6 +410,8 @@ cuadrada para tener un determinante'
 # D = Matriz([[0,2,3,21],[2,0,5,7],[4,5,0,2],[2,5,6,0],[2,3,4,5]], 'D')
 # E = Matriz([[1,2],[2,3],[24,2],[5,3],[6,7],[76,4],[7,0],[-9,-2],[-1,-4]], 'E')
 # F = Matriz([[1,2,3,4,5,6,7,8,9]], 'F')
+# G = Matriz([[2,2],[3,4]])
+# H = Matriz([[3]])
 
 # print(A)
 # print(B)
@@ -420,7 +419,12 @@ cuadrada para tener un determinante'
 # print(D)
 # print(E)
 # print(F)
+# print(G)
+# print(H)
 
+# print(B.get_transpuesta())
+# B.transpose()
+# print(B)
 
 ##Resolución de sistemas de ecuaciones lineales:
 
