@@ -414,25 +414,6 @@ cuadrada para tener un determinante'
 # E = Matriz([[1,2],[2,3],[24,2],[5,3],[6,7],[76,4],[7,0],[-9,-2],[-1,-4]], 'E')
 # F = Matriz([[1,2,3,4,5,6,7,8,9]], 'F')
 
-# coeficientes0 = Matriz([[3,2],[4,-3]], 'Coeficientes')
-# resultados0 = Matriz([[7],[-2]], 'Resultados')
-# variables0 = coeficientes0.get_inversa() * resultados0
-# print(variables0) #Da 0,99999999999 para 1
-
-# coeficientes1 = Matriz([[16,-6,4,1],[1,-8,1,1],[16,2,-4,1],[9,8,-3,1]], 'Coeficientes')
-# resultados1 = Matriz([[-36],[-64],[-4],[-64]], 'Resultados')
-# variables1 = coeficientes1.get_inversa() * resultados1
-# variables1.rename('Solución')
-# print(variables1)
-
-# resultadosCcolumna = Matriz([[3],[34],[5],[12],[6],[43],[0],[12],[5]], 'Resultados')
-# print(C.get_inversa() * resultadosCcolumna)
-# print()
-
-# resultadosCfila = Matriz([[3,34,5,12,6,43,0,12,5]])
-# print(C.sist_ec_lineal(resultadosCfila))
-
-
 # print(A)
 # print(B)
 # print(C)
@@ -440,35 +421,12 @@ cuadrada para tener un determinante'
 # print(E)
 # print(F)
 
-# A[0] = [2,3,3,2,2]
-# print(A)
-# print(f'B-D')
-# print(B-D)
 
-# print(D.get_transpuesta())
-# Ftrans = F.get_transpuesta()
-# F.transpose() ?????????
-# print(F)
-# print(Ftrans)
-# print(C*F)
+##Resolución de sistemas de ecuaciones lineales:
 
+# resultadosCcolumna = Matriz([[3],[34],[5],[12],[6],[43],[0],[12],[5]], 'Resultados')
+# print(C.get_inversa() * resultadosCcolumna)
+# print()
 
-# print(f'A*B')
-# print(A*B)
-
-# print(A.get_determinante())
-# print(B.get_determinante())
-# print(C.get_determinante())
-# print(D.get_determinante())
-# D.prod_escalar(2)
-# print(D)
-# print(C*E)
-# print(C+E)
-
-# print(A.get_inversa())
-# print(B.get_inversa())
-# print(C.get_inversa())
-# print(D.get_inversa())
-
-# arroz = Matriz([[1,0,3], [0,1,3]], 'Mi Matriz')
-# print(arroz.Ndimension)
+# resultadosCfila = Matriz([[3,34,5,12,6,43,0,12,5]])
+# print(C.sist_ec_lineal(resultadosCfila))
