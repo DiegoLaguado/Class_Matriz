@@ -1,5 +1,3 @@
-from random import randint
-
 def prod_punto(vector1: list, vector2: list) -> float:
     """
     Calcula el producto punto entre dos vectores
