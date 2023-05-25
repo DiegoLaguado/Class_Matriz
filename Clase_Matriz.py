@@ -420,10 +420,6 @@ cuadrada para tener un determinante'
 # print(G)
 # print(H)
 
-# print(B.get_transpuesta())
-# B.transpose()
-# print(B)
-
 ##Resolución de sistemas de ecuaciones lineales:
 
 # resultadosCcolumna = Matriz([[3],[34],[5],[12],[6],[43],[0],[12],[5]], 'Resultados')
